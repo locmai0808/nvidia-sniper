@@ -1,12 +1,12 @@
 # nvidia-sniper [![discord](https://img.shields.io/discord/756303724095471617.svg?label=&logo=discord&logoColor=ffffff&color=7389D8&labelColor=6A7EC2)](https://discord.gg/rks69fD)
 
-This bot helps us buy Nvidia Founders Edition GPUs as soon as they become available.
+This bot helps us buy Nvidia Founders Edition GPUs as soon as they become available. (NO LONGER WORKS)
 
 ## Features
 
 - Continuously monitor the availability of target GPU on www.nvidia.com
 - Automatically checkout item using PayPal or as guest (credit card)
-- Automatically submit the order for credit card payment 
+- Automatically submit the order for credit card payment
 - Support for multiple locales (as defined in `data/customer.json`)
 - Support for multiple GPUs (as defined in `data/gpus.json`)
 
@@ -40,28 +40,28 @@ pipenv install
 ### Mac
 1. Install the latest version of [Firefox](https://www.firefox.com/)
 2. Install [brew](https://brew.sh/index_de) package manager
-3. Install Pipenv using 
+3. Install Pipenv using
     - `brew install pipenv`
-4. Navigate to project directory using 
-    - `cd nvidia-sniper` 
-5. Install project dependencies using 
+4. Navigate to project directory using
+    - `cd nvidia-sniper`
+5. Install project dependencies using
     - `pipenv install`
 
 ### Windows
 1. Install [Python](https://python-docs.readthedocs.io/en/latest/starting/install3/win.html) for Windows
 2. Install the latest version of [Firefox](https://www.firefox.com/)
-3. Open PowerShell and install Pipenv using 
+3. Open PowerShell and install Pipenv using
     - `pip install pipenv`
-4. Navigate to project directory using 
-    - `cd nvidia-sniper` 
-5. Install project dependencies using 
+4. Navigate to project directory using
+    - `cd nvidia-sniper`
+5. Install project dependencies using
     - `pipenv install`
-6. Install curses for Windows using 
+6. Install curses for Windows using
     - `pipenv install windows-curses`
 
 <details>
   <summary>If step 5. throws an error saying pipenv is not recognized</summary>
-  
+
   1. From the project directory root, setup a virtual environment using
       - `python -m venv .venv`
   2. Activate the virtual environment using
@@ -92,11 +92,11 @@ In the `config` folder a `customer.json` file and `notifications.json` file are 
 ### `notifications.json`
 The bot can send multiple push notifications, including a screenshot attachment along the checkout process. See https://github.com/caronc/apprise#supported-notifications for more information. Add additional entries to the `services` dictionary in the `notifications.json` file for multiple providers. For each notification, a custom `message` can be set. Additionally, the `screenshot` attachment can be toggled per provider.
 
-A couple of example URLs for different notification services: 
+A couple of example URLs for different notification services:
 - `pover://user@token`: Pushover
 - `tgram://bottoken/ChatID`: Telegram
 - `discord://webhook_id/webhook_token`: Discord
- 
+
 ### `customer.json`
 In the `customer.json` file you can configure your locale and the field contents used for auto-filling the checkout forms. Some fields require specific values.
 
